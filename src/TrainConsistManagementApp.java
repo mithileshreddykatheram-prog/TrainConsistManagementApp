@@ -1,42 +1,21 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TrainConsistManagementApp {
 
-    // Bogie class (Custom Object)
-    static class Bogie {
-        String name;
-        int capacity;
-
-        Bogie(String name, int capacity) {
-            this.name = name;
-            this.capacity = capacity;
-        }
-    }
-
     public static void main(String[] args) {
 
+        // Welcome message
         System.out.println("=== Train Consist Management App ===");
 
-        // UC7: Create list of Bogie objects
-        List<Bogie> bogies = new ArrayList<>();
+        // Initialize empty train consist
+        List<String> trainConsist = new ArrayList<>();
 
-        bogies.add(new Bogie("Sleeper", 72));
-        bogies.add(new Bogie("AC Chair", 56));
-        bogies.add(new Bogie("First Class", 40));
+        // Display initial bogie count
+        System.out.println("Train consist initialized successfully.");
+        System.out.println("Initial number of bogies: " + trainConsist.size());
 
-        System.out.println("\nBefore Sorting:");
-        for (Bogie b : bogies) {
-            System.out.println(b.name + " -> Capacity: " + b.capacity);
-        }
-
-        // Sorting using Comparator (Lambda)
-        bogies.sort(Comparator.comparingInt(b -> b.capacity));
-
-        System.out.println("\nAfter Sorting (Ascending Capacity):");
-        for (Bogie b : bogies) {
-            System.out.println(b.name + " -> Capacity: " + b.capacity);
-        }
-
-        System.out.println("\nSystem is ready for further operations...");
+        // Continue program
+        System.out.println("System is ready for further operations...");
     }
 }
